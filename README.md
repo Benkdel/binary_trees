@@ -4,24 +4,24 @@
 </h1>
 
 <h2 align="center">
-    0x0B - Python - Input/Output/JSON rep
+    Binary Trees
 </h2>
 
 <p align="center">
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/commits/main">
-        <img src="https://img.shields.io/github/last-commit/cristhian1107/printf.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit">
+    <a href="https://github.com/Benkdel/binary_trees/commits/main">
+        <img src="https://img.shields.io/github/last-commit/Benkdel/binary_trees.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit">
     </a>
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/issues">
-    <img src="https://img.shields.io/github/issues-raw/cristhian1107/printf.svg?style=flat-square&logo=github&logoColor=white"
+    <a href="https://github.com/Benkdel/binary_trees/issues">
+    <img src="https://img.shields.io/github/issues-raw/Benkdel/binary_trees.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub issues">
     </a>
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/pulls">
-    <img src="https://img.shields.io/github/issues-pr-raw/cristhian1107/printf.svg?style=flat-square&logo=github&logoColor=white"
+    <a href="https://github.com/Benkdel/binary_trees/pulls">
+    <img src="https://img.shields.io/github/issues-pr-raw/Benkdel/binary_trees.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub pull requests">
     </a>
 </p>
 
-<h4 align="center"> Respository for Holberton projects (academic) - Python </h4>
+<h4 align="center"> Respository for Holberton projects (academic) </h4>
 
 <p align="center">
     <a href="#Description">Description</a> •
@@ -30,7 +30,7 @@
 </p>
 
 ***
-# Higher Programming Lessons - Python
+# Higher Programming Lessons
 TBU.
 
 

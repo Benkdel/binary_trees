@@ -8,9 +8,12 @@ int main(int argc, char **argv)
 {
 	binary_tree_t *root;
 	unsigned int n_task = 0;
+	int ret;
 
+	(void)root;
 	(void)argc;
 	(void)argv;
+	(void)ret;
 
 	if (argc != 2)
 	{
@@ -54,7 +57,7 @@ int main(int argc, char **argv)
 		binary_tree_insert_right(root, 128);
 		binary_tree_print(root);
 		break;
-	
+
 	case 3:
 		root = binary_tree_node(NULL, 98);
 		root->left = binary_tree_node(root, 12);
@@ -64,6 +67,38 @@ int main(int argc, char **argv)
 		binary_tree_print(root);
 		binary_tree_delete(root);
 		break;
+
+	case 4:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		binary_tree_insert_right(root->left, 54);
+		binary_tree_insert_right(root, 128);
+		binary_tree_print(root);
+
+		ret = binary_tree_is_leaf(root);
+		printf("Is %d a leaf: %d\n", root->n, ret);
+		ret = binary_tree_is_leaf(root->right);
+		printf("Is %d a leaf: %d\n", root->right->n, ret);
+		ret = binary_tree_is_leaf(root->right->right);
+		printf("Is %d a leaf: %d\n", root->right->right->n, ret);
+		break;
+	case 5:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		binary_tree_insert_right(root->left, 54);
+		binary_tree_insert_right(root, 128);
+		binary_tree_print(root);
+
+		ret = binary_tree_is_root(root);
+		printf("Is %d a root: %d\n", root->n, ret);
+		ret = binary_tree_is_root(root->right);
+		printf("Is %d a root: %d\n", root->right->n, ret);
+		ret = binary_tree_is_root(root->right->right);
+		printf("Is %d a root: %d\n", root->right->right->n, ret);
+		break;
+
 	default:
 		break;
 	}

@@ -98,6 +98,17 @@ int main(int argc, char **argv)
 		ret = binary_tree_is_root(root->right->right);
 		printf("Is %d a root: %d\n", root->right->right->n, ret);
 		break;
+	case 6:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		root->left->left = binary_tree_node(root->left, 6);
+		root->left->right = binary_tree_node(root->left, 56);
+		root->right->left = binary_tree_node(root->right, 256);
+		root->right->right = binary_tree_node(root->right, 512);
+		binary_tree_print(root);
+		binary_tree_preorder(root, &print_num);
+		break;
 
 	default:
 		break;

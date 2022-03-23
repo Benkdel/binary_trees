@@ -6,9 +6,15 @@
  * @target_node: value of node to be measured, to be identified
  * Return: depth of node
  */
-size_t node_depth(binary_tree_t *tree, int target_node)
+size_t node_depth(const binary_tree_t *tree, int target_node)
 {
 	size_t result = 0;
+
+	(void)result;
+	(void)tree;
+	(void)target_node;
+
+	return (1);
 }
 
 /**

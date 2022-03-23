@@ -211,6 +211,20 @@ int main(int argc, char **argv)
 		size = binary_tree_size(null_root);
 		printf("Size of %d: %lu\n\n", 000, size);
 		break;
+	case 12:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		binary_tree_insert_right(root->left, 54);
+		binary_tree_insert_right(root, 128);
+		binary_tree_print(root);
+		size = binary_tree_leaves(root);
+		printf("Leaves in %d: %lu\n", root->n, size);
+		size = binary_tree_leaves(root->right);
+		printf("Leaves in %d: %lu\n", root->right->n, size);
+		size = binary_tree_leaves(root->left->right);
+		printf("Leaves in %d: %lu\n", root->left->right->n, size);
+		break;
 	default:
 		break;
 	}

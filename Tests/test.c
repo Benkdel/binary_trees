@@ -1,4 +1,6 @@
 #include "../binary_trees.h"
+#include <stdio.h>
+#include <string.h>
 
 /**
  * test - testing entry point

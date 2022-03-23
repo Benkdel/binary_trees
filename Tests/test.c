@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	binary_tree_t *root;
+	binary_tree_t *root, *null_root = NULL;
 	unsigned int n_task = 0;
 	int ret;
 	size_t height, depth, size;
@@ -20,6 +20,7 @@ int main(int argc, char **argv)
 	(void)height;
 	(void)depth;
 	(void)size;
+	(void)null_root;
 
 	if (argc != 2)
 	{
@@ -178,6 +179,37 @@ int main(int argc, char **argv)
 		printf("Size of %d: %lu\n", root->right->n, size);
 		size = binary_tree_size(root->left->right);
 		printf("Size of %d: %lu\n", root->left->right->n, size);
+		
+		printf(" \n\n ============= \n Edge cases for task 11: \n\n ======================= \n");
+		binary_tree_delete(root);
+		root = binary_tree_node(NULL, 56);
+		binary_tree_insert_right(root, 1);
+		binary_tree_insert_right(root, 2);
+		binary_tree_insert_right(root, 3);
+		binary_tree_insert_right(root, 4);
+		binary_tree_print(root);
+		size = binary_tree_size(root);
+		printf("Size of %d: %lu\n\n", root->n, size);
+		
+		binary_tree_delete(root);
+		root = binary_tree_node(NULL, 55);
+		binary_tree_insert_left(root, 1);
+		binary_tree_insert_left(root, 2);
+		binary_tree_insert_left(root, 3);
+		binary_tree_insert_left(root, 4);
+		binary_tree_print(root);
+		size = binary_tree_size(root);
+		printf("Size of %d: %lu\n\n", root->n, size);
+		
+		binary_tree_delete(root);
+		root = binary_tree_node(NULL, 99);
+		binary_tree_print(root);
+		size = binary_tree_size(root);
+		printf("Size of %d: %lu\n\n", root->n, size);
+		
+		binary_tree_print(null_root);
+		size = binary_tree_size(null_root);
+		printf("Size of %d: %lu\n\n", 000, size);
 		break;
 	default:
 		break;

@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include <stdio.h>
 
 /**
  * get_size - measures size of a binary tree
@@ -27,6 +26,9 @@ size_t get_size(const binary_tree_t *tree)
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	size_t result = 1;
+
+	if (tree == NULL)
+		return (0);
 
 	result = get_size(tree);
 

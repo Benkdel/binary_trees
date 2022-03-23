@@ -225,6 +225,20 @@ int main(int argc, char **argv)
 		size = binary_tree_leaves(root->left->right);
 		printf("Leaves in %d: %lu\n", root->left->right->n, size);
 		break;
+	case 13:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		binary_tree_insert_right(root->left, 54);
+		binary_tree_insert_right(root, 128);
+		binary_tree_print(root);
+		size = binary_tree_nodes(root);
+		printf("Nodes in %d: %lu\n", root->n, size);
+		size = binary_tree_nodes(root->right);
+		printf("Nodes in %d: %lu\n", root->right->n, size);
+		size = binary_tree_nodes(root->left->right);
+		printf("Nodes in %d: %lu\n", root->left->right->n, size);
+		break;
 	default:
 		break;
 	}

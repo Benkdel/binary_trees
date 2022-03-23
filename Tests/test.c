@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	binary_tree_t *root;
 	unsigned int n_task = 0;
 	int ret;
-	size_t height, depth;
+	size_t height, depth, size;
 
 	(void)root;
 	(void)argc;
@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 	(void)ret;
 	(void)height;
 	(void)depth;
+	(void)size;
 
 	if (argc != 2)
 	{
@@ -163,6 +164,20 @@ int main(int argc, char **argv)
 		printf("Depth of %d: %lu\n", root->right->n, depth);
 		depth = binary_tree_depth(root->left->right);
 		printf("Depth of %d: %lu\n", root->left->right->n, depth);
+		break;
+	case 11:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		binary_tree_insert_right(root->left, 54);
+		binary_tree_insert_right(root, 128);
+		binary_tree_print(root);
+		size = binary_tree_size(root);
+		printf("Size of %d: %lu\n", root->n, size);
+		size = binary_tree_size(root->right);
+		printf("Size of %d: %lu\n", root->right->n, size);
+		size = binary_tree_size(root->left->right);
+		printf("Size of %d: %lu\n", root->left->right->n, size);
 		break;
 	default:
 		break;

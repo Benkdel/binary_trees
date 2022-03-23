@@ -3,6 +3,7 @@
 /**
  * get_leaves - computes the number of leaves in a binary tree
  * @tree: pointer to the tree to be measuted
+ * @leaves_counter: pointer to int counter of leaves
  * Return: size of the tree, 0 if tree is NULL
  */
 void get_leaves(const binary_tree_t *tree, int *leaves_counter)

@@ -39,8 +39,6 @@ size_t binary_tree_height(const binary_tree_t *tree);
 size_t binary_tree_depth(const binary_tree_t *tree);
 
 /* Helper prototypes */
-int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
-size_t _height(const binary_tree_t *tree);
 void binary_tree_print(const binary_tree_t *tree);
 void print_num(int n);
 

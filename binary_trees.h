@@ -1,5 +1,5 @@
-#ifndef BINARY_TREES_H
-#define BINARY_TREES_H
+#ifndef _BINARY_TREES_H_
+#define _BINARY_TREES_H_
 
 /* Includes */
 #include <stdio.h>
@@ -22,7 +22,6 @@ struct binary_tree_s
 	struct binary_tree_s *left;
 	struct binary_tree_s *right;
 };
-
 typedef struct binary_tree_s binary_tree_t;
 
 /* Prototypes - Tasks */

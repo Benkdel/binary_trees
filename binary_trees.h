@@ -48,5 +48,6 @@ int binary_tree_balance(const binary_tree_t *tree);
 /* Helper prototypes */
 void binary_tree_print(const binary_tree_t *tree);
 void print_num(int n);
+size_t get_height(const binary_tree_t *tree);
 
 #endif

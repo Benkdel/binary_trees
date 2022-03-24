@@ -15,7 +15,6 @@ void get_nodes(const binary_tree_t *tree, int *leaves_counter)
 		get_nodes(tree->left, leaves_counter);
 	if (tree->right)
 		get_nodes(tree->right, leaves_counter);
-
 	if (tree->left || tree->right)
 		*(leaves_counter) += 1;
 }

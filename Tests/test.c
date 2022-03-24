@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 {
 	binary_tree_t *root, *null_root = NULL;
 	unsigned int n_task = 0;
-	int ret;
+	int ret, balance;
 	size_t height, depth, size;
 
 	(void)root;
@@ -21,6 +21,7 @@ int main(int argc, char **argv)
 	(void)depth;
 	(void)size;
 	(void)null_root;
+	(void)balance;
 
 	if (argc != 2)
 	{
@@ -238,6 +239,24 @@ int main(int argc, char **argv)
 		printf("Nodes in %d: %lu\n", root->right->n, size);
 		size = binary_tree_nodes(root->left->right);
 		printf("Nodes in %d: %lu\n", root->left->right->n, size);
+		break;
+	case 14:
+		root = binary_tree_node(NULL, 98);
+		root->left = binary_tree_node(root, 12);
+		root->right = binary_tree_node(root, 402);
+		binary_tree_insert_right(root->left, 54);
+		binary_tree_insert_right(root, 128);
+		binary_tree_insert_left(root, 45);
+		binary_tree_insert_right(root->left, 50);
+		binary_tree_insert_left(root->left->left, 10);
+		binary_tree_insert_left(root->left->left->left, 8);
+		binary_tree_print(root);
+		balance = binary_tree_balance(root);
+		printf("Balance of %d: %+d\n", root->n, balance);
+		balance = binary_tree_balance(root->right);
+		printf("Balance of %d: %+d\n", root->right->n, balance);
+		balance = binary_tree_balance(root->left->left->right);
+		printf("Balance of %d: %+d\n", root->left->left->right->n, balance);
 		break;
 	default:
 		break;
